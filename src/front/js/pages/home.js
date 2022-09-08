@@ -4,23 +4,29 @@ import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 
 export const Home = () => {
-	const { store, actions } = useContext(Context);
+  const { store, actions } = useContext(Context);
 
-	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!!</h1>
-			<p>
-				<img src={rigoImageUrl} />
-			</p>
-			<div className="alert alert-info">
-				{store.message || "Loading message from the backend (make sure your python backend is running)..."}
-			</div>
-			<p>
-				This boilerplate comes with lots of documentation:{" "}
-				<a href="https://github.com/4GeeksAcademy/react-flask-hello/tree/95e0540bd1422249c3004f149825285118594325/docs">
-					Read documentation
-				</a>
-			</p>
-		</div>
-	);
+  return (
+    <div className="text-center mt-5">
+      <div
+        className="p-5 text-center bg-image home-page"
+      >
+        <div className="mask">
+          <div className="d-flex justify-content-center align-items-center">
+            <div className="text-white">
+              <h1 className="mb-3">Heading</h1>
+              <h4 className="mb-3">Subheading</h4>
+              <a
+                className="btn btn-outline-light btn-lg"
+                href="#!"
+                role="button"
+              >
+                Call to action
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
